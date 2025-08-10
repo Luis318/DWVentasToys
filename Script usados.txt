@@ -1,0 +1,35 @@
+Script usados 
+
+-- Llenar DimTiempo
+
+DECLARE @StartDate date = '20100101';
+DECLARE @EndDate   date = '20401231';
+
+SET LANGUAGE Spanish;  -- para DATENAME en español
+SET DATEFIRST 1;       -- 1 = lunes (sáb=6, dom=7)
+
+;WITH Dates AS (
+    SELECT d = @StartDate
+    UNION ALL
+    SELECT DATEADD(DAY, 1, d)
+    FROM Dates
+    WHERE d < @EndDate
+)
+INSERT INTO dw.DimTiempo (
+    TiempoKey, Fecha, Anio, Trimestre, Mes, NombreMes, Dia, NombreDia, EsFinDeSemana
+)
+SELECT
+    TiempoKey      = DATEDIFF(DAY, @StartDate, d) + 1,          -- 2010-01-01 => 1
+    Fecha          = d,
+    Anio           = YEAR(d),
+    Trimestre      = (MONTH(d) + 2) / 3,                        -- 1..4
+    Mes            = MONTH(d),
+    NombreMes      = UPPER(LEFT(DATENAME(MONTH, d), 1)) + SUBSTRING(DATENAME(MONTH, d), 2, 14),
+    Dia            = DAY(d),
+    NombreDia      = UPPER(LEFT(DATENAME(WEEKDAY, d), 1)) + SUBSTRING(DATENAME(WEEKDAY, d), 2, 14),
+    EsFinDeSemana  = CASE WHEN DATEPART(WEEKDAY, d) IN (6, 7) THEN 1 ELSE 0 END
+FROM Dates
+WHERE NOT EXISTS (
+    SELECT 1 FROM dw.DimTiempo t WHERE t.Fecha = d
+)
+OPTION (MAXRECURSION 0);
