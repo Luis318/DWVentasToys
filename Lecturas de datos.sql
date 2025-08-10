@@ -2,7 +2,8 @@ select * from Region;
 
 Select * from State;
 
-
+use [TailspinToys2020-US]
+go
 
 
 Select distinct TimeZone from State;
@@ -47,5 +48,20 @@ p.RetailPrice
 from Product AS p
 
 
-select * from product
+-- Leer DimPromocion
 
+select 
+distinct PromotionCode,
+descripcion = 'Sin Descripcion'
+from Sales as sal where PromotionCode IS NOT NULL
+
+select * from SalesOffice
+
+
+-- Leer DimOficinaVentas
+
+select so.SalesOfficeID, so.AddressLine1, so.AddressLine2, so.City, s.StateID, s.StateName,
+so.PostalCode, so.Telephone, so.Facsimile, so.Email
+from SalesOffice as so
+inner join State as s
+on so.StateID=s.StateID

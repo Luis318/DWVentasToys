@@ -124,6 +124,7 @@ CREATE TABLE dw.DimOficinaVentas (
   AddressLine2     nvarchar(100)  NULL,
   City             nvarchar(50)   NOT NULL,
   StateID          int            NOT NULL,
+  StateName      nvarchar(50)   NOT NULL,
   PostalCode       nchar(5)       NOT NULL,
   Telephone        nvarchar(20)   NULL,
   Facsimile        nvarchar(20)   NULL,
@@ -144,8 +145,8 @@ ALTER TABLE dw.DimOficinaVentas WITH CHECK ADD CONSTRAINT CK_DimOficina_Fechas
 
 SET IDENTITY_INSERT dw.DimOficinaVentas ON;
 IF NOT EXISTS (SELECT 1 FROM dw.DimOficinaVentas WHERE OficinaVentasKey = 0)
-INSERT INTO dw.DimOficinaVentas (OficinaVentasKey, SalesOfficeID, AddressLine1, AddressLine2, City, StateID, PostalCode, Telephone, Facsimile, Email, Activo, FechaInicio, FechaFin)
-VALUES (0, -1, N'Desconocido', NULL, N'Desconocido', -1, N'00000', NULL, NULL, NULL, 1, '19000101', NULL);
+INSERT INTO dw.DimOficinaVentas (OficinaVentasKey, SalesOfficeID, AddressLine1, AddressLine2, City, StateID, StateName,PostalCode, Telephone, Facsimile, Email, Activo, FechaInicio, FechaFin)
+VALUES (0, -1, N'Desconocido', 'Desconocido', N'Desconocido', -1, 'Desconocido', N'00000', 'No hay telefono', 'Desconocido', 'No hay email', 1, '19000101', NULL);
 SET IDENTITY_INSERT dw.DimOficinaVentas OFF;
 GO
 
@@ -277,3 +278,62 @@ begin
 
 end
 end
+
+
+-- Actualizar DimProducto
+
+Create or Alter Procedure [dw].[ActualizarPromocion](@PromocionKey int, @PromotionCode nvarchar(20), @Descripcion nvarchar(200))
+as 
+begin
+
+declare @PromotionCodeActual nvarchar(20),
+        @DescripcionActual nvarchar(200)
+
+select @PromotionCodeActual=PromotionCode,
+@DescripcionActual=Descripcion
+from dw.DimPromocion 
+where PromocionKey=@PromocionKey
+
+if(@PromotionCodeActual<>@PromotionCode or @DescripcionActual<>@Descripcion)
+begin
+    update dw.DimPromocion set Activo=0, FechaFin=getdate() where PromocionKey=@PromocionKey - 1
+    insert into dw.DimPromocion (PromotionCode, Descripcion)
+    values(@PromotionCode, @Descripcion)
+end
+end
+
+
+-- Actualizar DimOficinaVentas
+
+create or alter Procedure [dw].[ActualizarOficinaVentas] (@OficinaVentasKey int, @AddressLine1 nvarchar(100), @AddressLine2 nvarchar(100),
+@City nvarchar(50), @StateID int, @StateName nvarchar(50), @PostalCode nchar(5), @Telephone nvarchar(20), @Facsimile nvarchar(20),
+@Email nvarchar(50))
+AS
+BEGIN 
+Declare @AddressLine1Actual nvarchar(100),
+        @AddressLine2Actual nvarchar(100),
+        @CityActual nvarchar(50),
+        @StateIDActual int,
+        @StateNameActual nvarchar(50),
+        @PostalCodeActual nchar(5),
+        @TelephoneActual nvarchar(20),
+        @FacsimileActual nvarchar(20),
+        @EmailActual nvarchar(50),
+        @SalesOfficeID int
+
+select @AddressLine1Actual=AddressLine1, @AddressLine2Actual=AddressLine2, @CityActual=City, @StateIDActual=StateID,
+@StateNameActual=StateName, @PostalCodeActual=PostalCode, @TelephoneActual=Telephone, @FacsimileActual=Facsimile,
+@EmailActual=Email, @SalesOfficeID=SalesOfficeID
+from dw.DimOficinaVentas 
+where OficinaVentasKey=@OficinaVentasKey
+
+if(@AddressLine1Actual<>@AddressLine1 or @AddressLine2Actual<>@AddressLine2 or @CityActual<>@City or @StateIDActual<>@StateID or 
+@StateNameActual<>@StateName or @PostalCodeActual<>@PostalCode or @TelephoneActual<>@Telephone or @FacsimileActual<>@Facsimile or 
+@EmailActual<>@Email)
+begin
+    update dw.DimOficinaVentas set Activo=0, FechaFin=GETDATE() where OficinaVentasKey=@OficinaVentasKey
+    insert into dw.DimOficinaVentas(SalesOfficeID, AddressLine1, AddressLine2, City, StateID, StateName, PostalCode, Telephone, Facsimile, Email)
+    values (@SalesOfficeID, @AddressLine1, @AddressLine2, @City, @StateID, @StateName, @PostalCode, @Telephone, @Facsimile, @Email)
+end
+end
+

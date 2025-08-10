@@ -1,0 +1,1218 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/10/2025 11:57:19 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-FS5TT22"
+  DTS:CreatorName="DESKTOP-FS5TT22\QA"
+  DTS:DTSID="{B4E93363-898A-4710-B840-4E53ECBE02DC}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="17418"
+  DTS:ObjectName="DimOficinaVentas"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{6F7763E4-DEAA-4E24-B3AA-FEEC580A088E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.DWVentasTailSpinToys.sa]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{CDC6648C-E29E-403B-BB9D-4EBDFDFA46F7}"
+      DTS:ObjectName="localhost.DWVentasTailSpinToys.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=DWVentasTailSpinToys;Persist Security Info=True;TrustServerCertificate=True;Application Name=SSIS-DimOficinaVentas-{CDC6648C-E29E-403B-BB9D-4EBDFDFA46F7}localhost.DWVentasTailSpinToys.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAACCro3apXTFzT55vV92NnLiIaDi7WgCOhIoa5Qmu529QAAAAAOgAAAAAIAACAAAADTGM2qPq9QOBxwq2W1iIHlkO7uXuckBkBGQo7+zLoYjCAAAADNbB0h1OCWiw97i0pjCCKUC7WNIf8Wn3ifg4HvmYgkT0AAAADrL58rPqIEmUdIvFtvEtzo21JE1QAEzmEAxCSHloa3LAgwokyS6wOaLXj4HRIqxLSxuwAWp/kqCzf49qJyX9b8</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.DWVentasTailSpinToys.sa1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5B405C5E-7D5B-4C54-B864-8B037E632A34}"
+      DTS:ObjectName="localhost.DWVentasTailSpinToys.sa1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=DWVentasTailSpinToys;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-DimOficinaVentas-{5B405C5E-7D5B-4C54-B864-8B037E632A34}localhost.DWVentasTailSpinToys.sa1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABSV4nk7DGO1dmR3MXN3L9j1726gHWG9Cb3yJAgDZA4lgAAAAAOgAAAAAIAACAAAAAMobvikxsXOrS3m9woEa6lScn3QX5B7lM3MwOHJMs1DCAAAAAinxit/MmRMKrzpthh15GLoez1+OMNVrnf18AVlXzOkEAAAAA9B98JA77cDLYAjNj8Zsc6QRImYHdfoV5Y3GFJAvq4WWq9Rv9DcKGN1B+JR39EXMaTSxry6eR2USVZVDWFCAGf</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.TailspinToys2020-US.sa]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{CB72D0D5-4B18-46C6-A44D-35C5861184E5}"
+      DTS:ObjectName="localhost.TailspinToys2020-US.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=TailspinToys2020-US;Persist Security Info=True;TrustServerCertificate=True;Application Name=SSIS-DimOficinaVentas-{CB72D0D5-4B18-46C6-A44D-35C5861184E5}localhost.TailspinToys2020-US.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAf/+irygcwNIMEciJ5S9XQwoyzYcxgImIb3/6Hp0urYQAAAAAOgAAAAAIAACAAAABOCchANrmcdtMA32ZN4uZEIJGaNoZM79u3IMeECpfRzyAAAADDClm2R5aL0lQ/av9UeZhS7ozM+vWPiNPkSQw1xoys30AAAAAlL4NA3fxJ2i32lp4z7MdYVs2+FBNQSwFa6AkKOtAfl9beMcoPN8f7EvwraOM+zfhFWL51h2AJ+YCYz2P0sA1d</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Llenar DimOficinaVentas"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{423E7D23-3062-4F18-B3BB-B88FDE4D4936}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Llenar DimOficinaVentas"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="Comando de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Ejecuta una instrucción SQL para cada fila de un flujo de datos. Por ejemplo, se usa para llamar al procedimiento almacenado de configuración de nuevo empleado para cada fila de la tabla de nuevos empleados. Nota: la ejecución de una instrucción SQL para cada fila de un flujo de datos de gran tamaño puede tardar mucho tiempo."
+              name="Actualizar DimSalesOffice"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">exec dw.ActualizarOficinaVentas ?,?,?,?,?,?,?,?,?,?
+</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DWVentasTailSpinToys.sa1]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DWVentasTailSpinToys.sa1]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB]"
+                  errorOrTruncationOperation="Ejecución de comando"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de comando de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].Columns[AddressLine1]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="AddressLine1"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@AddressLine1]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[AddressLine1]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].Columns[AddressLine2]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="AddressLine2"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@AddressLine2]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[AddressLine2]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@City]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].Columns[StateID]"
+                      cachedDataType="i4"
+                      cachedName="StateID"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@StateID]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[StateID]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].Columns[StateName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StateName"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@StateName]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[StateName]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="PostalCode"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@PostalCode]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].Columns[Telephone]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Telephone"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@Telephone]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[Telephone]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].Columns[Facsimile]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Facsimile"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@Facsimile]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[Facsimile]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@Email]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].Columns[OficinaVentasKey]"
+                      cachedDataType="i4"
+                      cachedName="OficinaVentasKey"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@OficinaVentasKey]"
+                      lineageId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Outputs[Salida de entradas coincidentes de búsqueda].Columns[OficinaVentasKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@OficinaVentasKey]"
+                      dataType="i4"
+                      name="@OficinaVentasKey">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@AddressLine1]"
+                      dataType="wstr"
+                      length="100"
+                      name="@AddressLine1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@AddressLine2]"
+                      dataType="wstr"
+                      length="100"
+                      name="@AddressLine2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@City]"
+                      dataType="wstr"
+                      length="50"
+                      name="@City">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@StateID]"
+                      dataType="i4"
+                      name="@StateID">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@StateName]"
+                      dataType="wstr"
+                      length="50"
+                      name="@StateName">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@PostalCode]"
+                      dataType="wstr"
+                      length="5"
+                      name="@PostalCode">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@Telephone]"
+                      dataType="wstr"
+                      length="20"
+                      name="@Telephone">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@Facsimile]"
+                      dataType="wstr"
+                      length="20"
+                      name="@Facsimile">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB].ExternalColumns[@Email]"
+                      dataType="wstr"
+                      length="50"
+                      name="@Email">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Información de parámetros. Coincide con los valores de DBPARAMFLAGSENUM de OLE DB."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Outputs[Salida de comando de OLE DB]"
+                  exclusionGroup="1"
+                  name="Salida de comando de OLE DB"
+                  synchronousInputId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Outputs[Salida de error de comando de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de comando de OLE DB"
+                  synchronousInputId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Outputs[Salida de error de comando de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Outputs[Salida de error de comando de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llenar DimOficinaVentas\Buscar SalesOffice"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Buscar SalesOffice"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select OficinaVentasKey, SalesOfficeID, AddressLine1, AddressLine2, City, 
+StateID, StateName, PostalCode, Telephone, Facsimile, Email
+from dw.DimOficinaVentas Where Activo = 1</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select OficinaVentasKey, SalesOfficeID, AddressLine1, AddressLine2, City, 
+StateID, StateName, PostalCode, Telephone, Facsimile, Email
+from dw.DimOficinaVentas Where Activo = 1) [refTable]
+where [refTable].[SalesOfficeID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="OficinaVentasKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalesOfficeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AddressLine1" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AddressLine2" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="City" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StateID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StateName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PostalCode" dataType="DT_WSTR" length="5" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Telephone" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Facsimile" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Email" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[SalesOfficeID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DWVentasTailSpinToys.sa1]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DWVentasTailSpinToys.sa1]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Inputs[Entrada de búsqueda].Columns[SalesOfficeID]"
+                      cachedDataType="i4"
+                      cachedName="SalesOfficeID"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[SalesOfficeID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">SalesOfficeID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Outputs[Salida de entradas coincidentes de búsqueda].Columns[OficinaVentasKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copiar columna"
+                      lineageId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Outputs[Salida de entradas coincidentes de búsqueda].Columns[OficinaVentasKey]"
+                      name="OficinaVentasKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn">OficinaVentasKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en 'Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes'."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Cargar Datos nuevos a DimSalesOffice"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dw"."DimOficinaVentas"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DWVentasTailSpinToys.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DWVentasTailSpinToys.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].Columns[SalesOfficeID]"
+                      cachedDataType="i4"
+                      cachedName="SalesOfficeID"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[SalesOfficeID]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[SalesOfficeID]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].Columns[AddressLine1]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="AddressLine1"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[AddressLine1]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[AddressLine1]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].Columns[AddressLine2]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="AddressLine2"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[AddressLine2]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[AddressLine2]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[City]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].Columns[StateID]"
+                      cachedDataType="i4"
+                      cachedName="StateID"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[StateID]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[StateID]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].Columns[StateName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="StateName"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[StateName]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[StateName]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="PostalCode"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[PostalCode]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].Columns[Telephone]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Telephone"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[Telephone]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[Telephone]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].Columns[Facsimile]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Facsimile"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[Facsimile]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[Facsimile]" />
+                    <inputColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[Email]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[Email]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[OficinaVentasKey]"
+                      dataType="i4"
+                      name="OficinaVentasKey" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[SalesOfficeID]"
+                      dataType="i4"
+                      name="SalesOfficeID" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[AddressLine1]"
+                      dataType="wstr"
+                      length="100"
+                      name="AddressLine1" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[AddressLine2]"
+                      dataType="wstr"
+                      length="100"
+                      name="AddressLine2" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="50"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[StateID]"
+                      dataType="i4"
+                      name="StateID" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[StateName]"
+                      dataType="wstr"
+                      length="50"
+                      name="StateName" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="5"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[Telephone]"
+                      dataType="wstr"
+                      length="20"
+                      name="Telephone" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[Facsimile]"
+                      dataType="wstr"
+                      length="20"
+                      name="Facsimile" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="50"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[Activo]"
+                      dataType="bool"
+                      name="Activo" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[FechaInicio]"
+                      dataType="dbTimeStamp"
+                      name="FechaInicio" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET].ExternalColumns[FechaFin]"
+                      dataType="dbTimeStamp"
+                      name="FechaFin" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llenar DimOficinaVentas\Leer SalesOffice"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Leer SalesOffice"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select so.SalesOfficeID, so.AddressLine1, so.AddressLine2, so.City, s.StateID, s.StateName,
+so.PostalCode, so.Telephone, so.Facsimile, so.Email
+from SalesOffice as so
+inner join State as s
+on so.StateID=s.StateID</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.TailspinToys2020-US.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.TailspinToys2020-US.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[SalesOfficeID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[SalesOfficeID]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[SalesOfficeID]"
+                      name="SalesOfficeID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[AddressLine1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[AddressLine1]"
+                      length="100"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[AddressLine1]"
+                      name="AddressLine1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[AddressLine2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[AddressLine2]"
+                      length="100"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[AddressLine2]"
+                      name="AddressLine2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[City]"
+                      length="50"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[StateID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[StateID]"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[StateID]"
+                      name="StateID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[StateName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[StateName]"
+                      length="50"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[StateName]"
+                      name="StateName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[PostalCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[PostalCode]"
+                      length="5"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[PostalCode]"
+                      name="PostalCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[Telephone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[Telephone]"
+                      length="20"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[Telephone]"
+                      name="Telephone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[Facsimile]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[Facsimile]"
+                      length="20"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[Facsimile]"
+                      name="Facsimile"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[Email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[Email]"
+                      length="50"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].Columns[Email]"
+                      name="Email"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[SalesOfficeID]"
+                      dataType="i4"
+                      name="SalesOfficeID" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[AddressLine1]"
+                      dataType="wstr"
+                      length="100"
+                      name="AddressLine1" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[AddressLine2]"
+                      dataType="wstr"
+                      length="100"
+                      name="AddressLine2" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="50"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[StateID]"
+                      dataType="i4"
+                      name="StateID" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[StateName]"
+                      dataType="wstr"
+                      length="50"
+                      name="StateName" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="5"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[Telephone]"
+                      dataType="wstr"
+                      length="20"
+                      name="Telephone" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[Facsimile]"
+                      dataType="wstr"
+                      length="20"
+                      name="Facsimile" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="50"
+                      name="Email" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[SalesOfficeID]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[SalesOfficeID]"
+                      name="SalesOfficeID" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[AddressLine1]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[AddressLine1]"
+                      name="AddressLine1" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[AddressLine2]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[AddressLine2]"
+                      name="AddressLine2" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[City]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[StateID]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[StateID]"
+                      name="StateID" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[StateName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[StateName]"
+                      name="StateName" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[PostalCode]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[PostalCode]"
+                      name="PostalCode" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[Telephone]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[Telephone]"
+                      name="Telephone" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[Facsimile]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[Facsimile]"
+                      name="Facsimile" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[Email]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[Email]"
+                      name="Email" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Llenar DimOficinaVentas.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice.Inputs[Entrada de comando de OLE DB]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Llenar DimOficinaVentas.Paths[Salida de entradas no coincidentes de búsqueda]"
+              endId="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de entradas no coincidentes de búsqueda"
+              startId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+            <path
+              refId="Package\Llenar DimOficinaVentas.Paths[Salida de origen de ADO NET]"
+              endId="Package\Llenar DimOficinaVentas\Buscar SalesOffice.Inputs[Entrada de búsqueda]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Llenar DimOficinaVentas\Leer SalesOffice.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="193.6,41.6"
+          Id="Package\Llenar DimOficinaVentas"
+          TopLeft="397.499978281559,136.933332381116" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Llenar DimOficinaVentas">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Llenar DimOficinaVentas\Buscar SalesOffice"
+          TopLeft="465.833307881324,214.066665178074" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Llenar DimOficinaVentas\Leer SalesOffice"
+          TopLeft="264.166652233237,70.1999995118379" />
+        <EdgeLayout
+          Id="Package\Llenar DimOficinaVentas.Paths[Salida de origen de ADO NET]"
+          TopLeft="341.766652233237,111.799999511838">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="207.666655648087,102.266665666236"
+              Start="0,0"
+              End="207.666655648087,94.7666656662363">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.1333328331182" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.1333328331182"
+                    Point2="0,51.1333328331182"
+                    Point3="4,51.1333328331182" />
+                  <mssgle:LineSegment
+                    End="203.666655648087,51.1333328331182" />
+                  <mssgle:CubicBezierSegment
+                    Point1="203.666655648087,51.1333328331182"
+                    Point2="207.666655648087,51.1333328331182"
+                    Point3="207.666655648087,55.1333328331182" />
+                  <mssgle:LineSegment
+                    End="207.666655648087,94.7666656662363" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="259.2,41.6"
+          Id="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice"
+          TopLeft="373.3333129353,382.199997342229" />
+        <EdgeLayout
+          Id="Package\Llenar DimOficinaVentas.Paths[Salida de entradas no coincidentes de búsqueda]"
+          TopLeft="549.433307881324,255.666665178074">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-46.4999949460234,126.533332164155"
+              Start="0,0"
+              End="-46.4999949460234,119.033332164155">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.2666660820773" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,59.2666660820773"
+                    Point2="0,63.2666660820773"
+                    Point3="-4,63.2666660820773" />
+                  <mssgle:LineSegment
+                    End="-42.4999949460234,63.2666660820773" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-42.4999949460234,63.2666660820773"
+                    Point2="-46.4999949460234,63.2666660820773"
+                    Point3="-46.4999949460234,67.2666660820773" />
+                  <mssgle:LineSegment
+                    End="-46.4999949460234,119.033332164155" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-130.139020910512,68.2666660820773,213.778046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\Llenar DimOficinaVentas\Actualizar DimSalesOffice"
+          TopLeft="784.999957109493,389.999997287989" />
+        <EdgeLayout
+          Id="Package\Llenar DimOficinaVentas.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="575.966641214657,255.666665178074">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="308.233315894836,134.333332109914"
+              Start="0,0"
+              End="308.233315894836,126.833332109914">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.497313879662" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.497313879662"
+                    Point2="0,54.497313879662"
+                    Point3="4,54.497313879662" />
+                  <mssgle:LineSegment
+                    End="304.233315894836,54.497313879662" />
+                  <mssgle:CubicBezierSegment
+                    Point1="304.233315894836,54.497313879662"
+                    Point2="308.233315894836,54.497313879662"
+                    Point3="308.233315894836,58.497313879662" />
+                  <mssgle:LineSegment
+                    End="308.233315894836,126.833332109914" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="54.297634509918,59.497313879662,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenar DimOficinaVentas\Buscar SalesOffice">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenar DimOficinaVentas\Leer SalesOffice">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenar DimOficinaVentas\Cargar Datos nuevos a DimSalesOffice">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

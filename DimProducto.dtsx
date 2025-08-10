@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="DimProducto"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{7AA889E7-45E0-424F-A37B-CE3FF7B53ECD}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{D1854AA2-D992-45D8-9684-BFA120283E1C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACR919Y2Kc2J++O9wSVVMoGk+aXukWFyecRTEaaD+FLYQAAAAAOgAAAAAIAACAAAAApgdX/ltyDIr2K9oqlyFHlDtdBy+QxPNpTHxGdkuUqACAAAABzm8PoGWV2kp4JeWW+IMQU9NUJcNWTTbwXF0uNUPvHGUAAAAADHbSeIgyjNSkMza9plKQNdrREa3t3vUIjDJwqa3ZS7Mat5Hy4EWsPKXhfTeG1bjV78aJb/vW/1RSatxjI15G3</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABJAE+V70OHOO9Fywhl6oMmNuzyhFAZjvvrs9lkHhnZ0AAAAAAOgAAAAAIAACAAAACl6HknoNG27t/6RS6XlQIvigCViHQf6QfNBAbH/65kUyAAAADLcFtK0t+1Wgg9Voczz1BncazTiUjb7WAYCyeET67Ib0AAAAB045mvo4Ni5/N2cCw9KQEiGIkuA+2z8ckghyPLfrprc2pJO9yPGTKXmCiCUCUTpLG6HMeiH1rmXCAojWmQK/T2</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAG73GfQqItIrqiEQXVPlc8coeIAXGfPN1/+Zj3nSvZpQAAAAAOgAAAAAIAACAAAADFczNpUf0dQNI0KCnJey07B8/yvuudjuUQNILlxfwhnCAAAAA4ORHkBX+4svXwYRyWsSGENg+ePs106xN80zwKpklk9UAAAADwx0+zJRWbZuTT5y7JEcG66xgwFTJuFe88atxALTW41ShekTLE8mGeyVuvboymwiCW/ywTxdHc0XB9DxtUwneN</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABTt/IBUCq/Kn717M/lbFhpMH0aCBo4tr0p/E2WAzW/LgAAAAAOgAAAAAIAACAAAADTxHb8CyfNOyuyIIAW+Hb495f79n0DhaLqkcSaChKzDiAAAABchTy7H9hI7Ar/vQGPx+tsvqZL7lRKibwSPco3uvfps0AAAAAgyXMyDSjOtIsG78SOTOf6gajmWwPKGax4xEvaZcKivUJZVojFItigW076DojFDNNve2RjPp/HJr6LSOE0kLTj</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -59,7 +59,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAHdlJVmNPtcpAeaADGhNgqtAcnfLioAM87LmaxWbWtHQAAAAAOgAAAAAIAACAAAABF3s68zEye/Xh6450Ve/pqN53oFU1KOdgWXFybHf6Z7CAAAACu5A3y/dTzj1iPZFDKI/YCEHXXjp3Xbepnn9Ms5q9mUEAAAAB6LbW9tLbvDzOycBuZNRqZVIVqyh1BlSwan1cqirHlJADUPh8MnDTKwrZFb3rsmeYAir9NSwoyG+g4f1aT+vT4</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAACB2og7yQoeYHgZo4dc1ywDnz6TSjy8ObuOiMlSpxRbwAAAAAOgAAAAAIAACAAAABBkBjVjlJ3/bOpDCyYYtb9TDlaBAP546ZYyroD+3XhJyAAAADasVxCUzECuSJZcCSb9Vkw+PY9qvCu5bspfignT9sIxkAAAAAGxOQjIUJoTysi4/WgtAVpkOsJgt5Zy7tkoXIknyAEnIJY1gtwrKsO858pdX3EqIjZ7X+di/aecA8QJpx4RtIT</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1032,6 +1032,10 @@ from Product AS p</property>
           Id="Package\Llenar DimProducto\Buscar Producto"
           TopLeft="403.333311296172,251.333331585593" />
         <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\Llenar DimProducto\Actualizar DimProducto"
+          TopLeft="652.499964348973,420.333330410388" />
+        <NodeLayout
           Size="248,41.6"
           Id="Package\Llenar DimProducto\Cargar Datos nuevos a DimProducto"
           TopLeft="279.999984701475,419.466663749748" />
@@ -1105,10 +1109,6 @@ from Product AS p</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="187.2,41.6"
-          Id="Package\Llenar DimProducto\Actualizar DimProducto"
-          TopLeft="652.499964348973,420.333330410388" />
         <EdgeLayout
           Id="Package\Llenar DimProducto.Paths[Salida de entradas coincidentes de búsqueda]"
           TopLeft="505.466644629506,292.933331585593">
