@@ -81,7 +81,7 @@ SELECT
     isNULL(s.PromotionCode, 'sin Promocion') as PromotionCode,
     p.ProductID,
     isNULL(s.ShipDate, '') as ShipDate,
-    s.OrderDate
+    isNULL(s.OrderDate,'') as OrderDate
 FROM dbo.Sales AS s
 INNER JOIN dbo.State  AS st ON st.StateID  = s.CustomerStateID
 INNER JOIN dbo.Product AS p ON p.ProductID = s.ProductID
