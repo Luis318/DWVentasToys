@@ -1,4 +1,5 @@
 ﻿-- DW para gestion de ventas que puedan medir los niveles de venta por cantidad y precio 
+-- Creacion de Base de datos y Procedimientos almacenados
 
 IF DB_ID('DWVentasTailSpinToys') IS NULL
     CREATE DATABASE DWVentasTailSpinToys;
