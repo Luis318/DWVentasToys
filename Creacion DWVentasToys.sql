@@ -189,6 +189,7 @@ CREATE TABLE dw.FactVentas (
   Quantity        int            NOT NULL,
   UnitPrice       decimal(9,2)   NOT NULL,
   DiscountAmount  decimal(9,2)   NOT NULL,
+  CustomerStateID int            NOT NULL,
 );
 
 ALTER TABLE dw.FactVentas

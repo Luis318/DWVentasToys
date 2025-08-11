@@ -65,3 +65,30 @@ so.PostalCode, so.Telephone, so.Facsimile, so.Email
 from SalesOffice as so
 inner join State as s
 on so.StateID=s.StateID
+
+-- Leer FactVentas
+
+select * from Sales
+
+SELECT
+    s.OrderNumber,
+    s.Quantity,
+    s.UnitPrice,
+    s.DiscountAmount,
+    s.CustomerStateID,
+    isNULL(so.SalesOfficeID, 0) as SalesOfficeID,   
+    st.StateID,
+    isNULL(s.PromotionCode, 'sin Promocion') as PromotionCode,
+    p.ProductID,
+    isNULL(s.ShipDate, '') as ShipDate,
+    s.OrderDate
+FROM dbo.Sales AS s
+INNER JOIN dbo.State  AS st ON st.StateID  = s.CustomerStateID
+INNER JOIN dbo.Product AS p ON p.ProductID = s.ProductID
+OUTER APPLY (
+    SELECT TOP (1) soi.SalesOfficeID
+    FROM dbo.SalesOffice AS soi
+    WHERE soi.StateID = st.StateID
+    ORDER BY soi.SalesOfficeID
+) AS so
+ORDER BY s.OrderNumber;
