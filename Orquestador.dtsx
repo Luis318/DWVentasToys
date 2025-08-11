@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{268A177D-B473-426E-A958-581A800519F6}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{B9CEBBC2-AB95-4451-804D-F137361B2A5F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -85,23 +85,6 @@
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\FactVentas"
-      DTS:CreationName="Microsoft.ExecutePackageTask"
-      DTS:Description="Tarea Ejecutar paquete"
-      DTS:DTSID="{A41CE104-BD73-49E1-92CA-D14E28A88EBC}"
-      DTS:ExecutableType="Microsoft.ExecutePackageTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="FactVentas"
-      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <ExecutePackageTask>
-          <UseProjectReference>True</UseProjectReference>
-          <PackageName>FactVentas.dtsx</PackageName>
-        </ExecutePackageTask>
-      </DTS:ObjectData>
-    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -128,14 +111,6 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción 2"
       DTS:To="Package\DimPromocion" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Restricción 3]"
-      DTS:CreationName=""
-      DTS:DTSID="{763321BD-6FC3-4F87-AD70-EE97EEA83584}"
-      DTS:From="Package\DimPromocion"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Restricción 3"
-      DTS:To="Package\FactVentas" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
@@ -148,7 +123,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="187.2,41.6"
           Id="Package\DimGeografia"
@@ -157,6 +132,14 @@
           Size="161.6,41.6"
           Id="Package\DimOficinaVentas"
           TopLeft="266.666652096643,137.799999041756" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\DimProducto"
+          TopLeft="374.166646223102,233.999998372793" />
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\DimPromocion"
+          TopLeft="486.666640076374,325.866664400631" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="203.599993989865,98.7999996022384">
@@ -191,10 +174,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\DimProducto"
-          TopLeft="374.166646223102,233.999998372793" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
           TopLeft="347.466652096643,179.399999041756">
@@ -229,10 +208,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="146.4,41.6"
-          Id="Package\DimPromocion"
-          TopLeft="486.666640076374,325.866664400631" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
           TopLeft="443.366646223102,275.599998372793">
@@ -259,44 +234,6 @@
                     Point3="116.499993853271,29.1333330139187" />
                   <mssgle:LineSegment
                     End="116.499993853271,42.7666660278373" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="131.2,41.6"
-          Id="Package\FactVentas"
-          TopLeft="604.166633656457,403.866663858228" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restricción 3]"
-          TopLeft="559.866640076374,367.466664400631">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="109.899993580083,36.3999994575976"
-              Start="0,0"
-              End="109.899993580083,28.8999994575976">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.1999997287988" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.1999997287988"
-                    Point2="0,18.1999997287988"
-                    Point3="4,18.1999997287988" />
-                  <mssgle:LineSegment
-                    End="105.899993580083,18.1999997287988" />
-                  <mssgle:CubicBezierSegment
-                    Point1="105.899993580083,18.1999997287988"
-                    Point2="109.899993580083,18.1999997287988"
-                    Point3="109.899993580083,22.1999997287988" />
-                  <mssgle:LineSegment
-                    End="109.899993580083,28.8999994575976" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
