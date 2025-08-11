@@ -1,4 +1,4 @@
--- DW para gestion de ventas que puedan medir los niveles de venta por cantidad y precio 
+ï»¿-- DW para gestion de ventas que puedan medir los niveles de venta por cantidad y precio 
 
 IF DB_ID('DWVentasTailSpinToys') IS NULL
     CREATE DATABASE DWVentasTailSpinToys;
@@ -153,21 +153,17 @@ GO
 --DimTiempo
 
 IF OBJECT_ID('dw.DimTiempo') IS NOT NULL DROP TABLE dw.DimTiempo;
-CREATE TABLE dw.DimTiempo (
-  TiempoKey     int          NOT NULL PRIMARY KEY,
-  Fecha         date         NOT NULL,
-  Anio          smallint     NOT NULL,
-  Trimestre     tinyint      NOT NULL,
-  Mes           tinyint      NOT NULL,
-  NombreMes     nvarchar(15) NOT NULL,
-  Dia           tinyint      NOT NULL,
-  NombreDia     nvarchar(15) NOT NULL,
-  EsFinDeSemana bit          NOT NULL
-);
+create table dw.DimTiempo
+(TiempoKey int primary key, --Llave surrogada
+Fecha datetime not null,
+Dia tinyint not null,
+Mes tinyint not null,
+Anio smallint not null)
+go
 
 IF NOT EXISTS (SELECT 1 FROM dw.DimTiempo WHERE TiempoKey = 0)
-INSERT INTO dw.DimTiempo (TiempoKey, Fecha, Anio, Trimestre, Mes, NombreMes, Dia, NombreDia, EsFinDeSemana)
-VALUES (0, '19000101', 1900, 1, 1, N'Desconocido', 1, N'Desconocido', 0);
+INSERT INTO dw.DimTiempo (TiempoKey, Fecha,Dia ,Mes, Anio )
+VALUES (0, '',0,0,0);
 GO
 
 
@@ -340,35 +336,29 @@ end
 
 
 -- Llenar DimTiempo--------------------------------------------------------------------------------
+-- =========================================================
+-- ParÃ¡metros de rango de fechas
+-- =========================================================
+DECLARE @FechaInicio DATE = '2010-01-01';
+DECLARE @FechaFin    DATE = '2035-12-31';
 
-DECLARE @StartDate date = '20100101';
-DECLARE @EndDate   date = '20401231';
-
-SET LANGUAGE Spanish;  -- para DATENAME en español
-SET DATEFIRST 1;       -- 1 = lunes (sáb=6, dom=7)
-
-;WITH Dates AS (
-    SELECT d = @StartDate
+;WITH Calendario AS
+(
+    SELECT @FechaInicio AS Fecha
     UNION ALL
-    SELECT DATEADD(DAY, 1, d)
-    FROM Dates
-    WHERE d < @EndDate
+    SELECT DATEADD(DAY, 1, Fecha)
+    FROM   Calendario
+    WHERE  Fecha < @FechaFin
 )
-INSERT INTO dw.DimTiempo (
-    TiempoKey, Fecha, Anio, Trimestre, Mes, NombreMes, Dia, NombreDia, EsFinDeSemana
-)
+INSERT INTO dw.DimTiempo (TiempoKey, Fecha, Dia, Mes, Anio)
 SELECT
-    TiempoKey      = DATEDIFF(DAY, @StartDate, d) + 1,          -- 2010-01-01 => 1
-    Fecha          = d,
-    Anio           = YEAR(d),
-    Trimestre      = (MONTH(d) + 2) / 3,                        -- 1..4
-    Mes            = MONTH(d),
-    NombreMes      = UPPER(LEFT(DATENAME(MONTH, d), 1)) + SUBSTRING(DATENAME(MONTH, d), 2, 14),
-    Dia            = DAY(d),
-    NombreDia      = UPPER(LEFT(DATENAME(WEEKDAY, d), 1)) + SUBSTRING(DATENAME(WEEKDAY, d), 2, 14),
-    EsFinDeSemana  = CASE WHEN DATEPART(WEEKDAY, d) IN (6, 7) THEN 1 ELSE 0 END
-FROM Dates
-WHERE NOT EXISTS (
-    SELECT 1 FROM dw.DimTiempo t WHERE t.Fecha = d
-)
+    ROW_NUMBER() OVER (ORDER BY Fecha) AS TiempoKey,  -- 1..N (0 ya reservado)
+    CAST(Fecha AS DATETIME)             AS Fecha,
+    DAY(Fecha)                          AS Dia,
+    MONTH(Fecha)                        AS Mes,
+    YEAR(Fecha)                         AS Anio
+FROM Calendario
 OPTION (MAXRECURSION 0);
+
+-- Verifica
+SELECT TOP (10) * FROM dw.DimTiempo ORDER BY TiempoKey;

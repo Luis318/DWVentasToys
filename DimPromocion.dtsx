@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{AAFADF14-4D72-447D-BD10-F1BC3A18B50A}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{ABE62F38-F879-4540-B9F6-D33B7E9F35BA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACM1cQIO9sJjeH7tsm/bII5hGHAEdtHjc5huVL0OX1LegAAAAAOgAAAAAIAACAAAABQt7XGnIqSj0tQz0k1YwrBKMaDPFayXfOFhb2gxsSqWSAAAADYTGX1Fg2hqFgpYd/Oy1vjETR7PQY3guLbIo4zOOiGMUAAAACY9yCOVe69RP5ETceeDOq+MH+GhDuo7NwvhxhWNV+ks1iHAFxTP4OhC5B+tfi9uVBBrDIsTRJtl2/n5DIcDR6R</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADZXnG3tE6eJOKzJoEX+5HcQ8k45PElf21AI3IDQML4cAAAAAAOgAAAAAIAACAAAABTqh+cVAgahSZhk/0Hkx0UBmm6lsl374I5dhVJyjoVuiAAAADXgIJcHHVmhVMV97pKBWCkSWEHOzZ+YJnxTynKa+jSj0AAAACVCse65xDYJsygn+1nix5xNuloRwCcRS5V2VDyeMJHnRV2XBHVc2g/kZveOr8ACGfk3S3ui5g0rsvEokJ0R5sH</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABv95kZ/iKhKcAlltUfaqkDFBDYhBNc0GVjFyqiWH2yKAAAAAAOgAAAAAIAACAAAABvSVtOG+SJKoJ5FXTsO9iG6k0LcC6Ml3z0RiFHb3XygSAAAAC8ughRwx+34ZKRZzw9icldZ8HIuejEZ1urHvSsOwBTd0AAAACU73clcJOyseAONyxElgYBApCd1AxXvW0Un0gTZFPtsxdg+QsAWX+l2IN2DhAT+RMi3RV/wsuqmORT8qgUP6iL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABNc3Oxoutc2UEynK/aI/FKbOkjvw5UYmynR2464xfd9gAAAAAOgAAAAAIAACAAAABpFRGFjMd+t4jkxVrwruLCPcOY0KU55IKjaGAeSOCyPyAAAABIvngzZEwc8b9Av+rjWlyjETlc114hMtCIgTJ7/7MV7kAAAADkrckgWSMPLqpGUOk0VRA+F93AgBaHaX/E0tZkGPG2EstSbqN9TTOA1+e7M+NeaXyD8wEKMPTGIntLa3orY6Oo</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -59,7 +59,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAGPlGSfTHkMSwid5ihjaInRbpVzCG4U4uWImc80ecdpwAAAAAOgAAAAAIAACAAAAD+ASm5x5w2Jzzbp/U9kcOxDNLzZPnk+5+7beLwt/vQOiAAAAAhTvmiBwazV1iX396dl1M1BWLdBMP7AR8KPKWfemqMWEAAAABRrTt6r1emv1jdLeOBBDsxv6cH1wwTsgeB9QZSvoM8gyGYhY9Dq19umktXq10kSyFp64I+lFNYYFSteOjpm8wF</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADNlMFwRzE0AaInJaV0S/fa8LFy19468VzrVe6TALRbDwAAAAAOgAAAAAIAACAAAACQHE+Sh9KUUtlFmu7KDxfw9lnNozipNnw3tI1LxMTe5yAAAACa3fesYqFgcbR9RGClBDa780lsFNnogh1G1QY9SbqCpUAAAABs5clxPaedvOv0DYfJJScflX61DvIglp+7t3qR4BLDBlXFNN5diB0XayfPZZpDr+FJoLbozSuUvg1oYcVaAC9A</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -786,7 +786,7 @@ from Sales as sal where PromotionCode IS NOT NULL</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-170.410340180232,74.9913262567328,231.1540234375,16"
+              BoundingBox="-161.722351898982,74.9913262567328,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -815,7 +815,7 @@ from Sales as sal where PromotionCode IS NOT NULL</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>

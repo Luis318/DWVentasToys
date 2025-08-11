@@ -92,3 +92,45 @@ OUTER APPLY (
     ORDER BY soi.SalesOfficeID
 ) AS so
 ORDER BY s.OrderNumber;
+
+use [TailspinToys2020-US];
+SELECT
+    s.OrderNumber,
+    s.Quantity,
+    s.UnitPrice,
+    s.DiscountAmount,
+    s.CustomerStateID,        -- FK al estado del cliente
+    s.PromotionCode,
+    s.ProductID,
+    s.ShipDate,
+    s.OrderDate,
+    st.StateID              -- Es el mismo valor que CustomerStateID
+FROM dbo.Sales AS s
+INNER JOIN dbo.State AS st
+    ON st.StateID = s.CustomerStateID;
+
+use DWVentasTailSpinToys;
+select * from dw.FactVentas
+
+use [TailspinToys2020-US];
+SELECT
+    isNULL(s.OrderNumber, '') AS OrderNumber,
+    s.Quantity,
+    s.UnitPrice,
+    s.DiscountAmount,
+    s.CustomerStateID,
+    isNULL(so_pick.SalesOfficeID, -1) as SalesOfficeID,   -- Oficina elegida por estado (TOP 1)
+    isNULL(s.PromotionCode, 'DESCONOCIDO') AS PromotionCode, 
+    s.ProductID,
+    isNULL(CAST(s.ShipDate AS datetime ), CONVERT(datetime,'19000101',112)) as ShipDate,
+    isNULL(CAST(s.OrderDate AS datetime), CONVERT(datetime,'19000101',112)) as OrderDate,
+    st.StateID
+FROM Sales AS s
+INNER JOIN State AS st
+    ON st.StateID = s.CustomerStateID
+OUTER APPLY (
+    SELECT TOP 1 so.SalesOfficeID
+    FROM SalesOffice AS so
+    WHERE so.StateID = st.StateID
+    ORDER BY so.SalesOfficeID
+) AS so_pick;

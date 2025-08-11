@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="DimProducto"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{D1854AA2-D992-45D8-9684-BFA120283E1C}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{F7F310B7-D992-4A44-A714-E59D5BFF8F00}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABJAE+V70OHOO9Fywhl6oMmNuzyhFAZjvvrs9lkHhnZ0AAAAAAOgAAAAAIAACAAAACl6HknoNG27t/6RS6XlQIvigCViHQf6QfNBAbH/65kUyAAAADLcFtK0t+1Wgg9Voczz1BncazTiUjb7WAYCyeET67Ib0AAAAB045mvo4Ni5/N2cCw9KQEiGIkuA+2z8ckghyPLfrprc2pJO9yPGTKXmCiCUCUTpLG6HMeiH1rmXCAojWmQK/T2</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADDoiTdWo+R53BAx7tSxtwYWX5pfjPn2kXNMXtqREUGAwAAAAAOgAAAAAIAACAAAABNDhfGjxceMNDcrVc9rUdS9a5ZDl2EGA3Ua4HPavcdQiAAAACM6YjuAfTQCoj/3X/S03zJ272Uus8fbMPvudZOVAx+mUAAAADUMM9AX2H9N6M7x+wYwzQAzOHorQgn5OPTO7sqpzlSj9JFYQDHTEY3HQbWvkPUcfDvs0Vy5/hM7+ziJoW9SkqN</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABTt/IBUCq/Kn717M/lbFhpMH0aCBo4tr0p/E2WAzW/LgAAAAAOgAAAAAIAACAAAADTxHb8CyfNOyuyIIAW+Hb495f79n0DhaLqkcSaChKzDiAAAABchTy7H9hI7Ar/vQGPx+tsvqZL7lRKibwSPco3uvfps0AAAAAgyXMyDSjOtIsG78SOTOf6gajmWwPKGax4xEvaZcKivUJZVojFItigW076DojFDNNve2RjPp/HJr6LSOE0kLTj</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABvh/Tbl+HURF8waRpgfppFbMT07vIXTRnbAtdqw2fRQgAAAAAOgAAAAAIAACAAAACohCjwt9TYkljTnchuHWK2B9NiRf2YBMa4+JsfMnH2biAAAAAzF1bsC4KApUfqz6z5SoRDAI0AjGzxEuYziU4fR2VY60AAAADxM+04wjxF/INRAEXlHVetpKCpvw35+N0p67pb7jYBg9cSiZzE3mWFsrogit/HYpHws+j7+Y3nuy+ezpzACwUW</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -59,7 +59,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAACB2og7yQoeYHgZo4dc1ywDnz6TSjy8ObuOiMlSpxRbwAAAAAOgAAAAAIAACAAAABBkBjVjlJ3/bOpDCyYYtb9TDlaBAP546ZYyroD+3XhJyAAAADasVxCUzECuSJZcCSb9Vkw+PY9qvCu5bspfignT9sIxkAAAAAGxOQjIUJoTysi4/WgtAVpkOsJgt5Zy7tkoXIknyAEnIJY1gtwrKsO858pdX3EqIjZ7X+di/aecA8QJpx4RtIT</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAlG9gtXXUuMVw62u1+uw+fGkR+2frDOQnQrFXR03qG1AAAAAAOgAAAAAIAACAAAACtqhStyC+eG6kHBEfhAWxXTh6JThZCa/xerrlWkugHziAAAACJLJWPFsGQhI9hEGIzY0b6SrvbS/VLB89NUfu0uPOi/UAAAAAv1p1VgXjjS9JeJs8+SkcGfkUY2fpwWyvuthR2U7PYGNlluJbbFjlk3ti5IJzqXKFQbCv1baHRepbWnVxYQYJ8</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1141,7 +1141,7 @@ from Product AS p</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="11.8096481409838,56.7399995227229,217.0140234375,16"
+              BoundingBox="20.497636422234,56.7399995227229,199.638046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1162,7 +1162,7 @@ from Product AS p</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1172,7 +1172,7 @@ from Product AS p</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

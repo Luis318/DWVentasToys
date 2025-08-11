@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{10DFD78E-6E17-42EA-9771-4564FF5BDFC0}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{1DF0302C-5530-4809-BBE9-3C4BDF2B86C4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABoIxQAdV5wIpT1MWZHDK7j3JuABnxVHX2FZBVo54wz9gAAAAAOgAAAAAIAACAAAAD3oCc0UVoKPL4cJhzOGRfNKO2FwydOeqrViEP9Bh7DriAAAADuWa6mOWGPbrhgo0ASYI8CmzeyUgrY3RUWJqPNHUQBn0AAAACFlc4/vzePlwS/AWnJ/ntfxQXEqQlF2SFZJNDj/VkYPuZnncTR6hniKHLch7yxsWlz5J0t3laLbAKd1jxYzxas</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAASUQbsFXWLqhkHjpn5EY3VAzmYe8bZKqAFi8hXnu6BfQAAAAAOgAAAAAIAACAAAAD3OPkqAuLQqpvMoGWlPlls5uA2oz0pDhsN+NZ9tUBTmyAAAAAOEH1PLMdGMfnoPES75Cviy5OlyG9LUEcGsnqVVzY8sUAAAAC9MHBsF+babXcGI9V+M2Fpf5YOucS8tY5YJb6WMw/8L7DfGQ+solmclFimeAOc8v1GBnKt3n7YdR2zus2h60wL</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACrPJH8jvZCoiw/UwaN4LE82a9HYUXSAfhK1FOi39drlAAAAAAOgAAAAAIAACAAAAA/3TIOGYtxeqJSVOlxrNkDBlp2uhJVT7WSgkBxyhKDnCAAAAAixrpr4F2JGHDasynOE5BvB+6EmtjGOdlyjq1T9zKpgUAAAAC3luuxwxQdrnu1ky1KgWrvJasMvDppUkG+2CWlZrh4nkEXw+wc4pdvccNh0rMA8QnVN1eQvtRp/f7+PE0gX21y</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADW8BJQ6LpWzlmSXzYMKOE5PdQ5OH/bnIoigi/7BajpBgAAAAAOgAAAAAIAACAAAAA+RvVEeICkEgCLiUbfsKCXHyZweXlJoimunINz4/TjSiAAAACssV1qjthSsL02YlR7ejGA6qnCIeK+sEbU/aI6fDHYB0AAAADZqAbLc/MvgGrXzDj1LtKmmIxbLz3Xy0+x/jbNJ6VtLVUTRQNrba6YO0cUAklitAVlWt5gS0o96humXXQpYc/s</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -59,7 +59,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAw0EHGUWj8g2CISyQctloEDWONCDY69iBg2rGfvDd2EwAAAAAOgAAAAAIAACAAAAAEE99HPFQwQyvc1EHj7Lz1lpb/btUSdtdYaX7/E1MUECAAAADYYZsBmnEBQ5ZSWmLh9Oi5u1jRLaycEIGjaGvM8Mo1PEAAAACKpDyowVWVJwXgBUhP7/3pv7CvkuWY0tbHlaXHxVU36WJLkZhZlQxfemAaV3a2p7VX60PZ2uA6Ix4YAGkxstoT</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAD/2uJBgezUKGMUNwLwSVUQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAtJJ1SDtitE1Efw80qbi+P64+gkagdDOIIftntxzQRygAAAAAOgAAAAAIAACAAAABjRKXHQjlb3fkaJ4CuxfOtT8s1gTvPCkWanXOQa6rJeSAAAACUhvyklRaCS/LtEZIBKlXjyapweXw395QkdyNXmnTpqkAAAAC/uedxZk1wyjafDfx24aFeiiALqlsX5VvHzbb5+NJjWB24iHKHYlx+OCkxE2B9eeLT1bx23ai1slkyGLv/ytTE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1015,7 +1015,7 @@ LEFT JOIN dbo.[Region] AS r
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-179.36033961109,52.5090904612531,231.1540234375,16"
+              BoundingBox="-170.67235132984,52.5090904612531,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1080,7 +1080,7 @@ LEFT JOIN dbo.[Region] AS r
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1090,7 +1090,7 @@ LEFT JOIN dbo.[Region] AS r
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
