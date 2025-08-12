@@ -37,7 +37,7 @@ TestResults/
 
 # === SSIS específico ===
 # Config local de proyecto (no compartir)
-*.dtproj.user
+
 
 # Artefactos de despliegue/compilación
 *.ispac
